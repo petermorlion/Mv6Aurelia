@@ -1105,3 +1105,7 @@
 /// <reference path="jspm_packages/github/aurelia/bootstrapper@0.14.0.js" />
 /// <reference path="jspm_packages/github/aurelia/templating-resources@0.13.0/show.js" />
 /// <reference path="jspm_packages/github/aurelia/event-aggregator@0.6.0.js" />
+/// <reference path="jspm_packages/npm/font-awesome@4.3.0.js" />
+/// <reference path="jspm_packages/github/systemjs/plugin-css@0.1.13.js" />
+/// <reference path="jspm_packages/github/systemjs/plugin-css@0.1.13/css-builder.js" />
+/// <reference path="jspm_packages/github/systemjs/plugin-css@0.1.13/css.js" />
