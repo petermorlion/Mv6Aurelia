@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22823.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{719B0BA5-F76B-4558-A6FF-DFCA8BAE256A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CE56AD6D-88E5-4460-920E-673FCA2240EE}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Mv6Aurelia", "src\Mv6Aurelia\Mv6Aurelia.xproj", "{6BE1CE98-C84A-41C0-8B1D-68C05B056853}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6BE1CE98-C84A-41C0-8B1D-68C05B056853}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BE1CE98-C84A-41C0-8B1D-68C05B056853}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BE1CE98-C84A-41C0-8B1D-68C05B056853}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BE1CE98-C84A-41C0-8B1D-68C05B056853}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6BE1CE98-C84A-41C0-8B1D-68C05B056853} = {719B0BA5-F76B-4558-A6FF-DFCA8BAE256A}
+	EndGlobalSection
+EndGlobal
