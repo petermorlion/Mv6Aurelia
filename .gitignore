@@ -192,3 +192,7 @@ ModelManifest.xml
 # Package manager folders
 jspm_packages/
 lib/
+
+# Gulp Babel output
+wwwroot/app.html
+wwwroot/app.js
