@@ -2,7 +2,8 @@
 
 var gulp = require("gulp"),
   rimraf = require("rimraf"),
-  fs = require("fs");
+  fs = require("fs"),
+  babel = require("gulp-babel");
 
 eval("var project = " + fs.readFileSync("./project.json"));
 
@@ -30,3 +31,20 @@ gulp.task("copy", ["clean"], function () {
       .pipe(gulp.dest(paths.lib + destinationDir));
   }
 });
+
+gulp.task("babel", function () {
+    gulp.src(['Aurelia/**/*.js', '!Aurelia/_references.js'])
+      .pipe(babel({
+          "optional": ["runtime"],
+          "stage": 2,
+          'modules': 'system'
+      }))
+      .pipe(gulp.dest('wwwroot'));
+});
+
+gulp.task('build-html', function () {
+    gulp.src(['Aurelia/**/*.html'])
+      .pipe(gulp.dest('wwwroot'));
+});
+
+gulp.task('build', ['copy', 'babel', 'build-html']);
