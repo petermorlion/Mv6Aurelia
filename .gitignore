@@ -199,3 +199,6 @@ wwwroot/app.js
 
 # Windows files
 Thumbs.db
+
+# VS2015 files
+_references.js
