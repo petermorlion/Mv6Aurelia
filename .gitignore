@@ -188,3 +188,7 @@ FakesAssemblies/
 GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
+
+# Package manager folders
+jspm_packages/
+lib/
