@@ -1,4 +1,4 @@
-﻿/// <binding Clean='clean' />
+﻿/// <binding BeforeBuild='build' Clean='clean' />
 
 var gulp = require("gulp"),
   rimraf = require("rimraf"),
@@ -35,7 +35,7 @@ gulp.task("copy", ["clean"], function () {
 gulp.task("babel", function () {
     gulp.src(['Aurelia/**/*.js', '!Aurelia/_references.js'])
       .pipe(babel({
-          "optional": ["runtime"],
+          "optional": ["runtime", "es7.decorators", "es7.classProperties"],
           "stage": 2,
           'modules': 'system'
       }))
