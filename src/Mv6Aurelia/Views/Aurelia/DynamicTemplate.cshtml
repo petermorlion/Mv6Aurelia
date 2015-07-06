@@ -1,0 +1,37 @@
+﻿@{
+    Layout = null;
+}
+
+
+<template>
+    <h2>Dynamic Template</h2>
+    <p>
+        This is an example of a dynamic template. A request is made for a javascript named <code>dynamic-template.html</code>.
+        But we have overridden the <code>ConventionalViewStrategy.convertModuleIdToViewUrl</code> function in <code>app.js</code>:
+    </p>
+    <code>
+        <pre>
+import {ConventionalViewStrategy} from 'aurelia-framework';
+
+ConventionalViewStrategy.convertModuleIdToViewUrl = function(moduleId){
+    let dynamicTemplates = new Set();
+    dynamicTemplates.add('dynamic-template');
+
+    if (dynamicTemplates.has(moduleId)) {
+        let view = moduleId.replace(/-([a-z])/gi, function(s, group1) {
+            return group1.toUpperCase();
+        });
+
+        return 'Aurelia/' + view;
+    }
+
+    return moduleId + '.html';
+}; 
+        </pre> 
+    </code>
+    <p>
+        Here, we declare a <code>Set</code> that contains the moduleIds for which we want to use server-side templates. We're using a convention
+        that all our server-side templates are handled by the <code>AureliaController</code> and that they have the same name as the moduleId, but
+        in PascalCase (i.e. 'dynamic-template' becomes 'Aurelia/DynamicTemplate').
+    </p>
+</template>
