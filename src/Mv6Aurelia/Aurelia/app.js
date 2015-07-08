@@ -3,6 +3,7 @@
 ConventionalViewStrategy.convertModuleIdToViewUrl = function(moduleId){
     let dynamicTemplates = new Set();
     dynamicTemplates.add('dynamic-template');
+    dynamicTemplates.add('navigation');
 
     if (dynamicTemplates.has(moduleId)) {
         let view = moduleId.replace(/-([a-z])/gi, function(s, group1) {

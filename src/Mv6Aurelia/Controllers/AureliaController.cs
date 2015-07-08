@@ -34,5 +34,10 @@ namespace Mv6Aurelia.Controllers
 
             return View(model);
         }
+
+        public IActionResult Navigation()
+        {
+            return View();
+        }
     }
 }
