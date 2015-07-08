@@ -194,8 +194,9 @@ jspm_packages/
 lib/
 
 # Gulp Babel output
-wwwroot/app.html
-wwwroot/app.js
+wwwroot/**/*.js
+wwwroot/**/*.html
+!wwwroot/config.js
 
 # Windows files
 Thumbs.db
